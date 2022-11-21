@@ -31,6 +31,8 @@ public class MemberApiController {
        return new CreateMemberResponse(id);
     }
 
+    //PUT은 replace 즉, 대체하는 방법
+    //PATCH는 update 즉, 부분만 변경하는 방법
     @PutMapping("/api/v2/members/{id}")
     public UpdateMemberResponse updateMemberV2(
             @PathVariable("id") Long id,
